@@ -28,12 +28,17 @@ fname = input('Enter file name: ')
 if (len(fname) < 1): fname = 'mbox.txt'
 fh = open(fname)
 for line in fh:
+
     # This part retrieves /split the organization (i.e.domain name) out from the string result
+
     if not line.startswith('From: '): continue
     pieces = line.split('@')
     pieces2 = pieces[1].split()
     org= pieces2[0]
-    # This part here checks first if there is already an entry for the organization i.e.org, if no, it inserts new row. If yes, it updates the new count for the org
+
+    # This part here checks first if there is already an entry for the organization i.e.org, if no, it inserts new row.
+    # If yes, it updates the new count for the org
+
     cur.execute('SELECT count FROM Counts WHERE org = ? ', (org,))
     row = cur.fetchone()
     if row is None:
