@@ -1,4 +1,3 @@
-"""
 Extracting Data from JSON
 
 In this assignment you will write a Python program somewhat similar to http://www.py4e.com/code3/json2.py. 
@@ -9,7 +8,7 @@ We provide two files for this assignment. One is a sample file where we give you
   Sample data: http://py4e-data.dr-chuck.net/comments_42.json (Sum=2553)
   Actual data: http://py4e-data.dr-chuck.net/comments_2212607.json (Sum ends with 89)
 You do not need to save these files to your folder since your program will read the data directly from the URL. Note: Each student will have a distinct data url for the assignment - so only use your own data url for analysis.
-"""
+
 
 ```python
 # Python libraries needed for this exercise
